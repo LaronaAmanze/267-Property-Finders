@@ -1,252 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>267 Property Finders</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <style>
-    body {
-      background-color: #f8f9fa;
-    }
-
-    .hero {
-      background: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2') center/cover no-repeat;
-      height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      position: relative;
-      text-align: center;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.6);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-      transition: 0.3s;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>267 Property Finders</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body {
+ background-color: #f8f9fa;
+}
+/* HERO */
+.hero {
+ background: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2') center/cover no-repeat;
+ height: 70vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: white;
+ position: relative;
+ text-align: center;
+}
+.hero::after {
+ content: "";
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ background: rgba(0,0,0,0.6);
+}
+.hero-content {
+ position: relative;
+ z-index: 2;
+}
+.card:hover {
+ transform: scale(1.03);
+ transition: 0.3s;
+}
+/* LANDLORD vs TENANT */
+.section {
+ padding: 60px 0;
+}
+.section-alt {
+ background-color: #ffffff;
+}
+.section-title {
+ font-weight: bold;
+}
+.section-eyebrow {
+ color: #6c757d;
+ font-size: 14px;
+}
+.role-split {
+ display: flex;
+ gap: 20px;
+ flex-wrap: wrap;
+}
+.role-panel {
+ flex: 1;
+ padding: 25px;
+ border-radius: 10px;
+ color: white;
+}
+.sky-panel {
+ background: linear-gradient(135deg, #0d6efd, #6ea8fe);
+}
+.green-panel {
+ background: linear-gradient(135deg, #198754, #75d69c);
+}
+.role-emo {
+ font-size: 40px;
+ margin-bottom: 10px;
+}
+.role-list {
+ padding-left: 18px;
+}
+.fee-box {
+ background: rgba(255,255,255,0.2);
+ padding: 10px;
+ border-radius: 8px;
+ margin: 15px 0;
+}
+.btn-full {
+ width: 100%;
+}
+</style>
 </head>
-
 <body>
-
-<!-- Navbar -->
+<!-- NAVBAR -->
 <nav class="navbar navbar-dark bg-dark">
-  <div class="container">
-    <span class="navbar-brand">🏠 267 Property Finders</span>
-    <div>
-      <button class="btn btn-light me-2" onclick="showPage('home')">Home</button>
-      <button class="btn btn-light me-2" onclick="showPage('accommodation')">Accommodation</button>
-      <button class="btn btn-light" onclick="showPage('feedback')">Reviews</button>
-    </div>
-  </div>
+<div class="container">
+<span class="navbar-brand">🏠 267 Property Finders</span>
+<div>
+<button class="btn btn-light me-2" onclick="showPage('home')">Home</button>
+<button class="btn btn-light me-2" onclick="showPage('accommodation')">Accommodation</button>
+<button class="btn btn-light" onclick="showPage('feedback')">Reviews</button>
+</div>
+</div>
 </nav>
-
 <div class="container mt-4">
-
 <!-- HOME -->
 <div id="home">
-  <div class="hero rounded">
-    <div class="hero-content">
-      <h1 class="display-4 fw-bold">Find Your Perfect Student Home</h1>
-      <p class="lead">Affordable accommodation across Botswana 🇧🇼</p>
-      <button class="btn btn-primary btn-lg" onclick="showPage('accommodation')">Browse Houses</button>
-    </div>
-  </div>
+<div class="hero rounded">
+<div class="hero-content">
+<h1 class="display-4 fw-bold">Find Your Perfect Student Home</h1>
+<p class="lead">Affordable accommodation across Botswana 🇧🇼</p>
+<button class="btn btn-primary btn-lg" onclick="showPage('accommodation')">
+       Browse Houses
+</button>
 </div>
-
+</div>
+<!-- LANDLORD vs TENANT -->
+<section class="section section-alt mt-5">
+<div class="text-center mb-5">
+<span class="section-eyebrow">🤝 For Everyone</span>
+<h2 class="section-title">Built for Landlords & Tenants</h2>
+</div>
+<div class="role-split">
+<div class="role-panel sky-panel">
+<div class="role-emo">🏢</div>
+<h3>I'm a Landlord</h3>
+<p>Reach tenants across Gaborone</p>
+<ul class="role-list">
+<li>List unlimited properties</li>
+<li>Track enquiries</li>
+<li>Map placement</li>
+<li>Tenant screening</li>
+<li>Analytics dashboard</li>
+</ul>
+<div class="fee-box">
+         Listing Fee<br><strong>P150</strong>
+</div>
+<button class="btn btn-dark btn-full btn-lg">Post Property</button>
+</div>
+<div class="role-panel green-panel">
+<div class="role-emo">👤</div>
+<h3>I'm a Tenant</h3>
+<p>Find affordable housing easily</p>
+<ul class="role-list">
+<li>Browse for free</li>
+<li>Filter properties</li>
+<li>Safe enquiries</li>
+<li>View details</li>
+<li>Student listings</li>
+</ul>
+<div class="fee-box">
+         Finder Fee<br><strong>P200</strong>
+</div>
+<button class="btn btn-dark btn-full btn-lg" onclick="showPage('accommodation')">
+         Find Home
+</button>
+</div>
+</div>
+</section>
+</div>
 <!-- ACCOMMODATION -->
 <div id="accommodation" style="display:none">
-  <h2 class="mb-4">Available Houses</h2>
-  <div class="row" id="houses"></div>
+<h2 class="mb-4">Available Houses</h2>
+<div class="row" id="houses"></div>
 </div>
-
 <!-- DETAILS -->
 <div id="details" style="display:none">
-  <button class="btn btn-secondary mb-3" onclick="showPage('accommodation')">Back</button>
-  <div id="detailsContent"></div>
+<button class="btn btn-secondary mb-3" onclick="showPage('accommodation')">Back</button>
+<div id="detailsContent"></div>
 </div>
-
 <!-- APPLY -->
 <div id="apply" style="display:none">
-  <h2 class="mb-3">Application Form</h2>
-  <div class="card p-4 shadow">
-    <input class="form-control mb-3" placeholder="Full Name">
-    <input class="form-control mb-3" placeholder="Email">
-    <input class="form-control mb-3" placeholder="Phone">
-    <textarea class="form-control mb-3" placeholder="Notes"></textarea>
-    <button class="btn btn-success w-100" onclick="alert('Application Submitted!')">Submit Application</button>
-  </div>
+<h2 class="mb-3">Application Form</h2>
+<div class="card p-4 shadow">
+<input class="form-control mb-3" placeholder="Full Name">
+<input class="form-control mb-3" placeholder="Email">
+<input class="form-control mb-3" placeholder="Phone">
+<textarea class="form-control mb-3" placeholder="Notes"></textarea>
+<button class="btn btn-success w-100" onclick="alert('Application Submitted!')">
+     Submit Application
+</button>
 </div>
-
+</div>
 <!-- FEEDBACK -->
 <div id="feedback" style="display:none">
-  <h2 class="mb-4">Student Reviews</h2>
-  <div class="row">
-    <div class="col-md-4"><div class="card p-3 shadow">⭐⭐⭐⭐⭐ Kabelo<br>Great place!</div></div>
-    <div class="col-md-4"><div class="card p-3 shadow">⭐⭐⭐⭐ Thato<br>Loved the WiFi</div></div>
-    <div class="col-md-4"><div class="card p-3 shadow">⭐⭐⭐⭐⭐ Neo<br>Very safe</div></div>
-  </div>
+<h2 class="mb-4">Student Reviews</h2>
+<div class="row">
+<div class="col-md-4"><div class="card p-3 shadow">⭐⭐⭐⭐⭐ Kabelo<br>Great place!</div></div>
+<div class="col-md-4"><div class="card p-3 shadow">⭐⭐⭐⭐ Thato<br>Loved the WiFi</div></div>
+<div class="col-md-4"><div class="card p-3 shadow">⭐⭐⭐⭐⭐ Neo<br>Very safe</div></div>
 </div>
-
 </div>
-
+</div>
 <!-- FOOTER -->
 <footer class="text-center p-3 bg-dark text-white mt-5">
-  © 2026 267 Property Finders | Student Living Made Easy
+ © 2026 267 Property Finders | Student Living Made Easy
 </footer>
-
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-
 const houses = [
-  {
-    title:"Apartment",
-    price:"P2500",
-    location:"Gaborone",
-    img:"https://images.unsplash.com/photo-1560185007-cde436f6a4d0",
-    bedrooms:2,
-    bathrooms:1,
-    wifi:true,
-    parking:true,
-    security:"24/7 Security",
-    extras:"Furnished, Study Desk"
-  },
-  {
-    title:"Hostel",
-    price:"P1500",
-    location:"Francistown",
-    img:"https://images.unsplash.com/photo-1555854877-bab0e564b8d5",
-    bedrooms:1,
-    bathrooms:1,
-    wifi:true,
-    parking:false,
-    security:"Controlled Access",
-    extras:"Shared Kitchen"
-  },
-  {
-    title:"Studio",
-    price:"P2000",
-    location:"Gaborone",
-    img:"https://images.unsplash.com/photo-1493809842364-78817add7ffb",
-    bedrooms:1,
-    bathrooms:1,
-    wifi:true,
-    parking:true,
-    security:"Electric Fence",
-    extras:"Modern Interior"
-  },
-  {
-    title:"House",
-    price:"P1800",
-    location:"Tlokweng",
-    img:"https://images.unsplash.com/photo-1570129477492-45c003edd2be",
-    bedrooms:3,
-    bathrooms:2,
-    wifi:true,
-    parking:true,
-    security:"Gate & Alarm",
-    extras:"Big Yard"
-  },
-  {
-    title:"Room",
-    price:"P1500",
-    location:"Old Naledi",
-    img:"https://images.unsplash.com/photo-1505691938895-1758d7feb511",
-    bedrooms:1,
-    bathrooms:1,
-    wifi:false,
-    parking:false,
-    security:"Basic Lock",
-    extras:"Budget Friendly"
-  },
-  {
-    title:"Flat",
-    price:"P2200",
-    location:"Extension 12",
-    img:"https://images.unsplash.com/photo-1484154218962-a197022b5858",
-    bedrooms:2,
-    bathrooms:1,
-    wifi:true,
-    parking:true,
-    security:"24/7 Security",
-    extras:"Near Shops"
-  }
+ {title:"Apartment",price:"P2500",location:"Gaborone",img:"https://images.unsplash.com/photo-1560185007-cde436f6a4d0",bedrooms:2,bathrooms:1,wifi:true,parking:true,security:"24/7 Security",extras:"Furnished"},
+ {title:"Hostel",price:"P1500",location:"Francistown",img:"https://images.unsplash.com/photo-1555854877-bab0e564b8d5",bedrooms:1,bathrooms:1,wifi:true,parking:false,security:"Controlled Access",extras:"Shared Kitchen"},
+ {title:"Studio",price:"P2000",location:"Gaborone",img:"https://images.unsplash.com/photo-1493809842364-78817add7ffb",bedrooms:1,bathrooms:1,wifi:true,parking:true,security:"Electric Fence",extras:"Modern"},
+ {title:"House",price:"P1800",location:"Tlokweng",img:"https://images.unsplash.com/photo-1570129477492-45c003edd2be",bedrooms:3,bathrooms:2,wifi:true,parking:true,security:"Gate & Alarm",extras:"Big Yard"},
+ {title:"Room",price:"P1500",location:"Old Naledi",img:"https://images.unsplash.com/photo-1505691938895-1758d7feb511",bedrooms:1,bathrooms:1,wifi:false,parking:false,security:"Basic Lock",extras:"Budget"},
+ {title:"Flat",price:"P2200",location:"Extension 12",img:"https://images.unsplash.com/photo-1484154218962-a197022b5858",bedrooms:2,bathrooms:1,wifi:true,parking:true,security:"24/7 Security",extras:"Near Shops"}
 ];
-
 const container = document.getElementById("houses");
-
 houses.forEach((h,i)=>{
-  container.innerHTML += `
-    <div class="col-md-4 mb-4">
-      <div class="card shadow-sm">
-        <img src="${h.img}" class="card-img-top" style="height:200px; object-fit:cover;">
-        <div class="card-body">
-          <h5>${h.title}</h5>
-          <p>${h.location}</p>
-          <p class="fw-bold text-primary">${h.price}</p>
-          <button class="btn btn-primary w-100" onclick="viewDetails(${i})">View Details</button>
-        </div>
-      </div>
-    </div>
-  `;
+ container.innerHTML += `
+<div class="col-md-4 mb-4">
+<div class="card shadow-sm">
+<img src="${h.img}" class="card-img-top" style="height:200px; object-fit:cover;">
+<div class="card-body">
+<h5>${h.title}</h5>
+<p>${h.location}</p>
+<p class="fw-bold text-primary">${h.price}</p>
+<button class="btn btn-primary w-100" onclick="viewDetails(${i})">
+           View Details
+</button>
+</div>
+</div>
+</div>
+ `;
 });
-
 window.showPage = function(page){
-  ["home","accommodation","details","apply","feedback"].forEach(p=>{
-    document.getElementById(p).style.display = "none";
-  });
-  document.getElementById(page).style.display = "block";
+ ["home","accommodation","details","apply","feedback"].forEach(p=>{
+   document.getElementById(p).style.display="none";
+ });
+ document.getElementById(page).style.display="block";
 }
-
 window.viewDetails = function(i){
-  const h = houses[i];
-  const details = document.getElementById("detailsContent");
-
-  details.innerHTML = `
-    <div class="card shadow">
-      <img src="${h.img}" style="height:300px; object-fit:cover;">
-      <div class="p-3">
-        <h3>${h.title}</h3>
-        <p>${h.location}</p>
-        <p class="fw-bold text-primary">${h.price}</p>
-
-        <hr>
-
-        <h5>Property Details</h5>
-        <ul class="list-group mb-3">
-          <li class="list-group-item">🛏 Bedrooms: ${h.bedrooms}</li>
-          <li class="list-group-item">🛁 Bathrooms: ${h.bathrooms}</li>
-          <li class="list-group-item">📶 WiFi: ${h.wifi ? "Available" : "Not Available"}</li>
-          <li class="list-group-item">🚗 Parking: ${h.parking ? "Available" : "Not Available"}</li>
-          <li class="list-group-item">🔐 Security: ${h.security}</li>
-          <li class="list-group-item">🧺 Extras: ${h.extras}</li>
-        </ul>
-
-        <button class="btn btn-success w-100" onclick="showPage('apply')">Apply Now</button>
-      </div>
-    </div>
-  `;
-
-  showPage('details');
+ const h = houses[i];
+ document.getElementById("detailsContent").innerHTML = `
+<div class="card shadow">
+<img src="${h.img}" style="height:300px; object-fit:cover;">
+<div class="p-3">
+<h3>${h.title}</h3>
+<p>${h.location}</p>
+<p class="fw-bold text-primary">${h.price}</p>
+<ul class="list-group mb-3">
+<li class="list-group-item">Bedrooms: ${h.bedrooms}</li>
+<li class="list-group-item">Bathrooms: ${h.bathrooms}</li>
+<li class="list-group-item">WiFi: ${h.wifi ? "Yes" : "No"}</li>
+<li class="list-group-item">Parking: ${h.parking ? "Yes" : "No"}</li>
+<li class="list-group-item">Security: ${h.security}</li>
+<li class="list-group-item">Extras: ${h.extras}</li>
+</ul>
+<button class="btn btn-success w-100" onclick="showPage('apply')">
+         Apply Now
+</button>
+</div>
+</div>
+ `;
+ showPage("details");
 }
-
 });
 </script>
-
 </body>
 </html>
